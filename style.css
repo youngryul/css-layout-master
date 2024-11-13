@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
 body {
   background-color: #f6f6f6;
   padding: 50px 25px;
@@ -6,73 +8,70 @@ body {
   max-width: 770px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }
 
-.poster {
-  width: 500px;
-  height: 700px;
-  box-shadow: 0 10px 10px -5px;
-  padding: 30px;
-}
-
-.title_box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.title {
-  font-size: 70px;
-  font-weight: bold;
-}
-
-.number {
-  font-size: 40px;
-  margin-top: 40px;
-  font-weight: bold;
-}
-
-.text_box {
-  display: flex;
-  font-size: 8px;
-  justify-content: space-between;
-}
-
-
-.text1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.circle {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+#container {
+  height: 900px;
+  display: grid;
   gap: 10px;
+  grid-template:
+    "header header header" 0.5fr
+    "bad bad badnext" 3fr
+    "religion religion religion" 2.5fr / 1fr 1.5fr 1.5fr;
 }
 
-.sky {
-  background-color: skyblue;
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
+#container div:nth-child(1) {
+  background-color: black;
+  grid-area: header;
+  display: flex;
+  color: #f6f6f6;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-.grey {
-  background-color: gray;
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
+#container div:nth-child(2) {
+  background-color: red;
+  grid-area: bad;
+  display: flex;
+  align-items: flex-end;
 }
 
-.green {
-  background-color: green;
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
+#container div:nth-child(3) {
+  background-color: red;
+  grid-area: badnext;
 }
 
+#container div:nth-child(4) {
+  background-color: red;
+  grid-area: religion;
+}
+
+span {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+span:nth-child(1) {
+  margin-left: 10px;
+}
+
+span:nth-child(2) {
+  margin-left: -150px;
+}
+
+span:nth-child(3) {
+  margin-right: 10px;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 200px;
+}
+
+h5 {
+  margin-top: 40px;
+  margin-left: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
