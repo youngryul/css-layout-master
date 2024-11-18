@@ -1,80 +1,69 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
 body {
-  background-color: #f6f6f6;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 100vh;
-  width: 100%;
-  margin: 0 auto;
+    background-color: #f6f6f6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
 }
-
-#header {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: 10vw;
-}
-
 
 #container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fit, 35vh);
-  grid-auto-rows: 35vh;
-}
-
-#header > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5vmin;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 #container > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  grid-column: inherit;
+    padding: 15px;
 }
 
 #container > div:nth-child(1) {
-  background-color: #3dc1d3;
+    background-color: black;
+    color: white;
+    font-size: 35px;
+}
+
+#container > div:nth-child(2) {
+    background-color: blueviolet;
 }
 
 #container > div:nth-child(3) {
-  background-color: #ea8685;
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+#container > div:nth-child(3) > div:first-child {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#container > div:nth-child(3) > div:nth-child(6){
+    width: max-content;
+    background-color: #786fa6;
+}
+
+#container > div:nth-child(4) {
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+#container > div:nth-child(4) > div:first-child {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 #container > div:nth-child(5) {
-  background-color: #cf6a87;
+    grid-row: span 2;
+    background-color: red;
+    font-size: 30px;
 }
 
 #container > div:nth-child(7) {
-  background-color: #f7d794;
-}
-
-#container > div:nth-child(9) {
-  background-color: #786fa6;
-}
-
-#container > div:nth-child(11) {
-  background-color: #f3a683;
-}
-
-#container > div > img {
-  width: 100%;
-  height: 100%;
-}
-
-#container > div > div:nth-child(1) {
-  font-size: 3vmin;
-  padding: 10%;
-}
-
-#container > div > div:nth-child(2) {
-  font-size: 1vmin;
-  padding: 10%;
+    background-color: gold;
+    font-size: 30px;
 }
