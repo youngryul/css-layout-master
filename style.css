@@ -9,6 +9,48 @@ body {
     height: 100%;
 }
 
+#main {
+    position: relative;
+}
+
+#curry {
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#curry > div:nth-child(1) {
+    font-size: 50px;
+}
+
+#chat {
+    position: absolute;
+    left: 93%;
+    top: 91%;
+}
+
+#chat > div {
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 8px 6px -6px #666
+}
+
+#chat > div > svg > path {
+    fill : white;
+}
+
+
 #container {
     height: 100vh;
     display: grid;
@@ -85,12 +127,37 @@ img {
     border: solid 3px orange;
     background-color: green;
     color: white;
+    font-family: "Sour Gummy", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#container > div:nth-child(5) > div:nth-child(2) {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-style: italic;
 }
 
 #container > div:nth-child(6) {
     border: solid 3px orange;
     background-color: white;
     color: orange;
+    font-size: 15px;
+    font-family: "Sour Gummy", serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container > div:nth-child(6) > div:nth-child(1) {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    letter-spacing: 5px;
 }
 
 #container > div:nth-child(7) {
@@ -98,12 +165,30 @@ img {
     border: solid 3px orange;
     background-color: green;
     color: white;
+    font-family: "Sour Gummy", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#container > div:nth-child(7) > div:nth-child(2) {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-style: italic;
 }
 
 #container > div:nth-child(8) {
     border: solid 3px orange;
     background-color: white;
     color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 #container > div:nth-child(9) {
@@ -111,5 +196,21 @@ img {
     border: solid 3px orange;
     background-color: white;
     color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    overflow: hidden;
+    font-style: italic;
+}
+
+
+svg {
+    width: 25px;
+    height: 25px;
+}
+
+svg > path{
+    fill: orange;
 }
 
